@@ -18,6 +18,6 @@ const router = createRouter({
   routes
 })
 
-export default function initRouter(app: App) {
+export function initRouter(app: App) {
   app.use(router)
 }
