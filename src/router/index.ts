@@ -4,6 +4,10 @@ import type { App } from 'vue'
 
 const routes: RouteRecordRaw[] = [
   {
+    path: '/',
+    redirect: '/login'
+  },
+  {
     name: 'login',
     path: '/login',
     component: () => import('../views/login/Login.vue'), // 懒加载路由组件

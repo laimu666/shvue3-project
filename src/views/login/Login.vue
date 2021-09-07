@@ -1,5 +1,5 @@
 <template>
-<div>这是登录页</div>
+<div class="login">这是登录页<span class="child">child</span></div>
 <div>{{name}}</div>
 <HomeOutlined />
 <SettingFilled />
@@ -31,5 +31,5 @@ const strValue = ref<string>('09:00:00')
 </script>
 
 <style scoped lang='scss'>
-
+@import './login.scss'
 </style>

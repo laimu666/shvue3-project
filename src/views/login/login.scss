@@ -1,0 +1,8 @@
+$clolr: red;
+.login {
+  color: $clolr;
+
+  & .child {
+    color: blue;
+  }
+}
