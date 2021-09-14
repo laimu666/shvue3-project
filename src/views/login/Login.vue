@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Autor: 司浩
+ * @Date: 2021-09-03 15:41:13
+ * @LastEditors: 司浩
+ * @LastEditTime: 2021-09-13 17:22:26
+-->
 <template>
 <div class="login">这是登录页<span class="child">child</span></div>
 <div>{{name}}</div>
@@ -15,6 +23,9 @@
 import { defineComponent, ref, watch, computed } from 'vue'
 import { useStore } from '../../store'
 import moment, { Moment } from 'moment'
+import Is from 'utils/is'
+import Http from 'utils/http/index'
+
 import {
   HomeOutlined,
   SettingFilled,
@@ -28,6 +39,20 @@ import {
 // const name = computed(() => store.state.name)
 const value = ref<Moment>(moment('08:00:00', 'HH:mm:ss'))
 const strValue = ref<string>('09:00:00')
+console.log(Is.isFunction(Http.request))
+Http.request({
+  url: '/user',
+  params: {
+    ID: 12345
+  },
+  data: {
+    firstName: 'Fred'
+  }
+}).then((res) => {
+  console.log('res', res)
+}).catch((error) => {
+  console.log('error', error)
+})
 </script>
 
 <style scoped lang='scss'>
