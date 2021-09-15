@@ -1,10 +1,10 @@
 /*
- * @Description: 
+ * @Description:
  * @Version: 1.0
  * @Autor: 司浩
  * @Date: 2021-09-14 13:52:59
  * @LastEditors: 司浩
- * @LastEditTime: 2021-09-14 15:42:11
+ * @LastEditTime: 2021-09-15 14:14:47
  */
 import Mock from 'mockjs'
 import { XMLHttpRequest, ResFunc } from './_type'
@@ -20,7 +20,7 @@ Object.keys(modules).map((key) => {
 })
 
 function mockXHR() {
-  function XHR2ExpressReqWrap(response: ResFunc) {
+  function xhr2ExpressReqWrap(response: ResFunc) {
     return function(options: XMLHttpRequest) {
       let result = null
       if (response instanceof Function) {
@@ -38,12 +38,11 @@ function mockXHR() {
   }
 
   for (const i of mockModules) {
-    Mock.mock(new RegExp(i.url), i.type || 'get', XHR2ExpressReqWrap(i.response))
+    Mock.mock(new RegExp(i.url), i.type || 'get', xhr2ExpressReqWrap(i.response))
   }
 }
 
 export default function initMock() {
   mockXHR()
 }
-
 

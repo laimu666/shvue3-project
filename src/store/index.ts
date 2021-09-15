@@ -1,3 +1,11 @@
+/*
+ * @Description:
+ * @Version: 1.0
+ * @Autor: 司浩
+ * @Date: 2021-09-03 16:57:59
+ * @LastEditors: 司浩
+ * @LastEditTime: 2021-09-15 14:01:18
+ */
 import type { InjectionKey } from 'vue'
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
 import type { App } from 'vue'

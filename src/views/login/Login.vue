@@ -1,10 +1,10 @@
 <!--
- * @Description: 
+ * @Description:
  * @Version: 1.0
  * @Autor: 司浩
  * @Date: 2021-09-03 15:41:13
  * @LastEditors: 司浩
- * @LastEditTime: 2021-09-13 17:22:26
+ * @LastEditTime: 2021-09-15 14:01:49
 -->
 <template>
 <div class="login">这是登录页<span class="child">child</span></div>
@@ -15,8 +15,8 @@
 <SyncOutlined spin />
 <SmileOutlined :rotate="180" />
 <LoadingOutlined />
-<a-time-picker v-model:value="value" />
-<a-time-picker v-model:value="strValue" valueFormat="HH:mm:ss" />
+<a-time-picker v-model="value" />
+<a-time-picker v-model="strValue" valueFormat="HH:mm:ss" />
 </template>
 
 <script lang='ts' setup>

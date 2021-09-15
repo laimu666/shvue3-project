@@ -1,10 +1,10 @@
 /*
- * @Description: 
+ * @Description:
  * @Version: 1.0
  * @Autor: 司浩
  * @Date: 2021-09-13 13:38:12
  * @LastEditors: 司浩
- * @LastEditTime: 2021-09-13 16:51:05
+ * @LastEditTime: 2021-09-15 14:32:29
  */
 import axios from 'axios'
 import { AxiosRequestConfig, AxiosInstance, AxiosResponse } from 'axios'
@@ -15,10 +15,8 @@ export default class Vaxios {
   private transfrom: Nullable<Transfrom>
   private axiosInstance: AxiosInstance
   private requestOptions: Nullable<RequestOptions>
-
   constructor(options: VaxiosOptions) {
     const {instanceOptions, transfrom, requestOptions} = options
-
     this.transfrom = transfrom
     this.requestOptions = requestOptions
     this.axiosInstance = axios.create(instanceOptions)
