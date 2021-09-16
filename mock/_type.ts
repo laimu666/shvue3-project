@@ -1,10 +1,10 @@
 /*
- * @Description: 
+ * @Description:
  * @Version: 1.0
  * @Autor: 司浩
  * @Date: 2021-09-14 15:30:17
  * @LastEditors: 司浩
- * @LastEditTime: 2021-09-14 15:49:47
+ * @LastEditTime: 2021-09-16 17:52:38
  */
 export interface XMLHttpRequest {
   url: string,
