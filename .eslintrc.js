@@ -4,22 +4,22 @@
  * @Autor: 司浩
  * @Date: 2021-09-15 09:46:33
  * @LastEditors: 司浩
- * @LastEditTime: 2021-09-16 17:54:00
+ * @LastEditTime: 2021-09-16 18:01:16
  */
 module.exports = {
   // 指定环境，一个环境定义了一组预定义的全局变量
   env: {
     browser: true, // 浏览器环境中的全局变量
     es6: true, // 启用除了 modules 以外的所有 ECMAScript 6 特性（该选项会自动设置 ecmaVersion 解析器选项为 6）
-    node: true // Node.js 全局变量和 Node.js 作用域
+    node: true, // Node.js 全局变量和 Node.js 作用域
   },
   parser: 'vue-eslint-parser',
   // 配置扩展
   extends: [
     'plugin:vue/vue3-recommended', // 用于 Vue 3.x校验
     'plugin:@typescript-eslint/recommended',
-    'prettier' // // 放最后解决与eslint的冲突
-    // 'plugin:prettier/recommended' // 如果同时使用了 eslint-plugin-prettier 和 eslint-config-prettier 可以这么配置
+    'prettier', // // 放最后解决与eslint的冲突
+    'plugin:prettier/recommended', // 如果同时使用了 eslint-plugin-prettier 和 eslint-config-prettier 可以这么配置
     // 'airbnb-base' // 启用airbnb代码风格
   ],
   // 解析器参数
@@ -28,8 +28,8 @@ module.exports = {
     parser: '@typescript-eslint/parser', // 指定解析器
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true // 启用JSX
-    }
+      jsx: true, // 启用JSX
+    },
   },
   // // 使用插件
   // plugins: [
@@ -46,11 +46,11 @@ module.exports = {
     'vue/max-attributes-per-line': 'off', // 强制每行的最大属性数
     'vue/attribute-hyphenation': 'off', // 在模板中的自定义组件上强制使用属性命名样式
     'no-duplicate-imports': 'off', // 禁止重复模块导入
-    'comma-dangle': ['error', 'never'], // 强制在对象和数组字面量中使用一致的拖尾逗号
+    // 'comma-dangle': ['error', 'never'], // 强制在对象和数组字面量中使用一致的拖尾逗号
     'no-plusplus': 'off', // 禁止使用一元操作符 ++ 和 --
     'no-unused-vars': 'off', // 禁止出现未使用过的变量
-    'quotes': ['error', 'single'], // 要求尽可能地使用单引号
-    'indent': ['error', 2], // 2 个空格缩进
+    // 'quotes': ['error', 'single'], // 要求尽可能地使用单引号
+    // 'indent': ['error', 2], // 2 个空格缩进
     'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'], // 当空格用于对齐时，允许混合制表符和空格
     'new-cap': 'error', // 要求构造函数首字母大写
     'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }], // 不允许多个空行
@@ -60,12 +60,12 @@ module.exports = {
     'default-case': 'error', // 要求 switch 语句中有 default 分支
     'spaced-comment': ['error', 'always'], // 强制在注释中 // 或 /* 使用一致的空格
     'arrow-spacing': 'error', // 要求箭头函数的箭头之前或之后有空格
-    'semi': ['error', 'never'] // 要求行末或禁止使用分号
+    // 'semi': ['error', 'never'] // 要求行末或禁止使用分号
   },
   // 配置全局变量
   globals: {
-    Nullable: true
-  }
+    Nullable: true,
+  },
   // 为特定类型的文件指定处理器，例如，下面对 *.md 文件使用处理器 a-plugin/markdown
   // overrides: [
   //   {

@@ -4,7 +4,7 @@
  * @Autor: 司浩
  * @Date: 2021-09-13 16:26:55
  * @LastEditors: 司浩
- * @LastEditTime: 2021-09-16 17:19:38
+ * @LastEditTime: 2021-09-16 18:01:42
  */
 import { AxiosRequestConfig, AxiosResponse } from 'axios'
 
@@ -14,9 +14,9 @@ import { AxiosRequestConfig, AxiosResponse } from 'axios'
  * @interface VaxiosOptions
  */
 export interface VaxiosOptions {
-  instanceOptions: AxiosRequestConfig;
-  transfrom: Nullable<Transfrom>;
-  requestOptions: Nullable<RequestOptions>;
+  instanceOptions: AxiosRequestConfig
+  transfrom: Nullable<Transfrom>
+  requestOptions: Nullable<RequestOptions>
 }
 
 /**
@@ -31,14 +31,14 @@ export interface Transfrom {
   requestInterceptors?: (
     config: AxiosRequestConfig,
     requestOptions: Nullable<RequestOptions>,
-  ) => AxiosRequestConfig;
+  ) => AxiosRequestConfig
   /**
    * @description: 请求之后的拦截器
    */
   responseInterceptors?: (
     response: AxiosResponse,
     requestOptions: Nullable<RequestOptions>,
-  ) => AxiosResponse;
+  ) => AxiosResponse
 }
 
 /**

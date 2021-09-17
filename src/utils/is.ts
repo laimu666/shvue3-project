@@ -11,7 +11,7 @@ export default class Is {
   private toString = Object.prototype.toString
 
   static is(val: unknown, type: string) {
-    return this.toString.call(val) === `[object ${type}]`;
+    return this.toString.call(val) === `[object ${type}]`
   }
 
   static isString(val: unknown): val is string {

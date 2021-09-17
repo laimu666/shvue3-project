@@ -5,21 +5,21 @@ import type { App } from 'vue'
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/login'
+    redirect: '/login',
   },
   {
     name: 'login',
     path: '/login',
     component: () => import('../views/login/Login.vue'), // 懒加载路由组件
     meta: {
-      title: '登录页'
-    }
-  }
+      title: '登录页',
+    },
+  },
 ]
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
+  routes,
 })
 
 export function initRouter(app: App) {

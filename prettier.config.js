@@ -4,7 +4,7 @@
  * @Autor: 司浩
  * @Date: 2021-09-15 15:35:47
  * @LastEditors: 司浩
- * @LastEditTime: 2021-09-16 17:19:23
+ * @LastEditTime: 2021-09-16 18:03:01
  */
 module.exports = {
   printWidth: 100, // 单行代码超出 100 个字符自动换行
@@ -22,5 +22,5 @@ module.exports = {
   requirePragma: false,
   proseWrap: 'never',
   htmlWhitespaceSensitivity: 'strict', // 所有标记周围的空白（或缺少空白）被认为是重要的
-  endOfLine: 'auto'
+  endOfLine: 'auto',
 }

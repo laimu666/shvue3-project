@@ -6,8 +6,8 @@
  * @LastEditors: 司浩
  * @LastEditTime: 2021-09-16 17:18:58
  */
-import Vaxios from './axios';
-import { VaxiosOptions } from './type';
+import Vaxios from './axios'
+import { VaxiosOptions } from './type'
 
 const options: VaxiosOptions = {
   instanceOptions: {
@@ -17,6 +17,6 @@ const options: VaxiosOptions = {
   },
   transfrom: null,
   requestOptions: null,
-};
-const Http = new Vaxios(options);
-export default Http;
+}
+const Http = new Vaxios(options)
+export default Http

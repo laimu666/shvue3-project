@@ -11,7 +11,7 @@ import { XMLHttpRequest, ResFunc } from './_type'
 
 const modules = import.meta.globEager('./**/*.ts')
 const mockModules: any[] = []
-Object.keys(modules).map((key) => {
+Object.keys(modules).map(key => {
   if (key.includes('/_')) {
     return
   }
@@ -21,14 +21,14 @@ Object.keys(modules).map((key) => {
 
 function mockXHR() {
   function xhr2ExpressReqWrap(response: ResFunc) {
-    return function(options: XMLHttpRequest) {
+    return function (options: XMLHttpRequest) {
       let result = null
       if (response instanceof Function) {
         const { body, type, url } = options
         result = response({
           type: type,
           body: JSON.parse(body),
-          url: url
+          url: url,
         })
       } else {
         result = response
@@ -45,4 +45,3 @@ function mockXHR() {
 export default function initMock() {
   mockXHR()
 }
-

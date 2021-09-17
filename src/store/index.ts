@@ -20,17 +20,17 @@ export const key: InjectionKey<Store<State>> = Symbol('key')
 export const store = createStore<State>({
   state: {
     count: 0,
-    name: '1111'
+    name: '1111',
   },
   mutations: {
-    increment (state) {
+    increment(state) {
       state.count++
-    }
-  }
+    },
+  },
 })
 
 // 定义自己的 `useStore` 组合式函数
-export function useStore () {
+export function useStore() {
   return baseUseStore(key)
 }
 
